@@ -28,7 +28,7 @@ export default new Vuex.Store({
   
   actions: {
     getAllArticles({commit}){
-      axios.get('http://localhost:8000/articles/')
+      axios.get('https://blogserver.gladysefirina.website/articles/')
       .then(({data})=>{
         commit('allArticles',data)
       })
@@ -43,7 +43,7 @@ export default new Vuex.Store({
           'page':payload
         }
       }
-      axios.get(`http://localhost:8000/articles/${user}`,config)
+      axios.get(`https://blogserver.gladysefirina.website/articles/${user}`,config)
       .then(({data})=>{
         var totalData = data.total
         var noOfPage = Math.ceil(totalData/data.limit)

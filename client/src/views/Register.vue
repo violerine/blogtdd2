@@ -79,7 +79,7 @@ export default {
         username: this.username,
         password: this.password
       }
-        axios.post('http://localhost:8000/register',body)
+        axios.post('https://blogserver.gladysefirina.website/register',body)
         .then(user=>{
             console.log(user)
             this.$router.push('/login')

@@ -205,7 +205,7 @@ export default {
           }
           
           self.pleasewait='Please wait...'
-          axios.post("http://localhost:8000/articles/add",self.formdata)
+          axios.post("https://blogserver.gladysefirina.website/articles/add",self.formdata)
           .then(article=>{
             console.log("DAPET GA",article);
             self.pleasewait=''
@@ -249,7 +249,7 @@ export default {
         var articleidnya = this.articleid
 
         function deleteOne(articleidnya){
-            axios.delete(`http://localhost:8000/articles/delete/${articleidnya}`)
+            axios.delete(`https://blogserver.gladysefirina.website/articles/delete/${articleidnya}`)
               .then(article=>{
                 console.log("KEDELETE GA",article)
               })

@@ -76,7 +76,7 @@ export default {
     }, 
     methods: {
         login(){
-                axios.post('http://localhost:8000/login',{
+                axios.post('https://blogserver.gladysefirina.website/login',{
                     username :this.username,
                     password :this.password 
                 })
